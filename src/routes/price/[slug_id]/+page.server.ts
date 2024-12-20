@@ -8,10 +8,8 @@ export async function load({ params }) {
   const db = await dbClient();
   const products = db.collection('products');
 
-  const product = await products.findOne({});
-  console.log(product);
-  if (product) {
-    product._id = product._id.toString();
-  }
+  const product = await products.findOne({ id: parseInt(id) });
+  product._id = product._id.toString();
+
   return { product };
 }
