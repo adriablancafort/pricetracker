@@ -19,7 +19,7 @@ RUN npm run build
 FROM node:alpine
 
 COPY --from=build /app/build ./
-COPY --from=build package*.json ./
+COPY --from=build /app/package*.json ./
 
 RUN npm ci --production
 
