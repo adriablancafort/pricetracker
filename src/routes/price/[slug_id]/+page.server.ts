@@ -9,6 +9,9 @@ export async function load({ params }) {
   const products = db.collection('products');
 
   const product = await products.findOne({ id: parseInt(id) });
-  product._id = product._id.toString();
+  console.log(product);
+  if (product._id) {
+    product._id = product._id.toString();
+  }
   return { product };
 }
