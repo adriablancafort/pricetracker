@@ -2,8 +2,16 @@
   import { Button } from "$lib/components/ui/button/index.js";
 </script>
 
-<img src="https://cdn.asilor.com/asilor-logo-black.svg" alt="Asilor Logo" width="129" height="33">
- 
-<h1 class="font-bold text-6xl font-cabinet-grotesk">Realtime Product Price Tracker</h1>
+<section>
+  <div class="h-full text-center mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+      <h1 class="font-medium text-7xl font-cabinet-grotesk mb-8">
+        Realtime Product Price Tracker
+      </h1>
+      <p class="max-w-xl mx-auto">Track and compare the prices of 5.3 million products accross all major retailers including Amazon, Ebay, Walmart, MediaMarkt, Fnac and much more.</p>
+      <div class="mt-10 flex items-center justify-center gap-x-6">
+        <Button>Browse Deals</Button>
+        <a href="/" class="text-sm/6 font-semibold text-gray-900">See all retailers <span aria-hidden="true">→</span></a>
+      </div>
+  </div>
+</section>
 
-<Button>Click me</Button>
