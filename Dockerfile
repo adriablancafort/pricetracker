@@ -19,6 +19,9 @@ RUN npm run build
 FROM node:alpine
 
 COPY --from=build /app/build ./
+COPY --from=build package*.json ./
+
+RUN npm ci --production
 
 ENV NODE_ENV=production PORT=3000
 
