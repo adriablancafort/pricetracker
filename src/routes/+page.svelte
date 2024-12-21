@@ -1,5 +1,8 @@
 <script lang="ts">
   import { Button } from "$lib/components/ui/button/index.js";
+
+  let { data } = $props();
+  const products = data.products;
 </script>
 
 <section>
@@ -13,5 +16,14 @@
         <a href="/" class="text-sm/6 font-semibold text-gray-900">See all retailers <span aria-hidden="true">→</span></a>
       </div>
   </div>
+  {#each products as product}
+    <a href={`/price/${product.id}`} class="block bg-white shadow-lg rounded-lg p-6 mt-8 no-underline">
+      <div>
+        <h2 class="font-medium text-2xl font-cabinet-grotesk">{product.title}</h2>
+        <p>{product.description}</p>
+        <p>{product.category}</p>
+      </div>
+    </a>
+  {/each}
 </section>
 
