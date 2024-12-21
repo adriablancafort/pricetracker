@@ -1,6 +1,6 @@
 <script lang="ts">
     let { data } = $props();
-    let product = $derived(data.product);
+    const product = data.product;
 </script>
 
 <h1 class="font-medium text-3xl font-cabinet-grotesk">{product.title}</h1>
