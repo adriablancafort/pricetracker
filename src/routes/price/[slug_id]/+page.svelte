@@ -1,4 +1,6 @@
 <script lang="ts">
+    import Client from "$lib/components/Client.svelte";
+    
     let { data } = $props();
     const product = data.product;
 </script>
@@ -8,3 +10,5 @@
 <p>{product.description}</p>
 
 <p>{product.category}</p>
+
+<Client />
